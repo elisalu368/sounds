@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+
+        .button {
+            background-color: rgb(103, 230, 103);
+            width: 120px;
+            height: 100px;
+            border-radius: 80px;
+            margin: 50px 50px;
+        }
+
+        .button:hover {
+       
+            background-image:url(https://i.imgur.com/wre2PiRb.jpg);
+        }
+
+        .item :hover{
+                transform: rotate(3);
+              }
+
+
+    </style>
+
+    <script src="libs/howler.js"></script>
+
+    <title>sampler</title>
+</head>
+<body>
+
+    <div class="container">
+       <div class="button" onclick="playSound(sound0)"></div>
+       <div class="button" onclick="playSound(sound1)"></div>
+       <div class="button" onclick="playSound(sound2)"></div>
+       <div class="button" onclick="playSound(sound3)"></div>
+    </div>
+
+</body>
+
+<script>
+const sound0 = new Howl({ src: 'sounds/0.mp3' });
+const sound1 = new Howl({ src: 'sounds/1.mp3' });
+const sound2 = new Howl({ src: 'sounds/2.mp3' });
+const sound3 = new Howl({ src: 'Sarah Hotchkiss, Anything.mp3' });
+console.log(sound0);
+const playSound = (sound) => {
+    sound.play();
+}
+
+</script>
+</html>
